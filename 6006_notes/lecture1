@@ -1,0 +1,57 @@
+Lecture 1:
+Algorithmic Thinking, Peak Finding 
+
+Finding a peak in the one dimensional version
+
+The condition:
+a-i are numbers
+Position 2 is a peak if and only if 
+b greater than or equal to a
+b is greater than or equal to c
+
+If you are at the edges of the array then you only have to look to either the "right" or the "left"
+
+The 1D case for this problem is 
+Find a peak if it exists lol...
+Based on the condition created above there is always a peak. I've never thought about it that way but it seems right.
+
+
+The Straightforward Algorithm:
+
+Start from left >.>
+
+To optimize you can use binary search? ._.
+Lets see how it works.
+
+if a[n/2] < a[n/2-1] then only look at the left half... 1 - (n/2 - 1) 
+Else if a[n/2] < a[n/2+1] then look through right half
+else done return mid
+
+[1,5,7,3,6,44,12,31]
+
+to prevent overflow 
+mid = left + (right - left)/2;
+
+
+From a computational standpoint
+
+T(N) "work" algorithm does on an input of size n = T(n/2) + Theta(1)
+base case : T(1) = Theta(1)
+T(n) = theta(1) + ... + theta(1) < logn times
+as a results theta(logn) 
+
+14 seconds for linear but .001 seconds for the logn version for 10 million inputs
+
+2D version of peak finder
+
+Greedy Ascent Algorithm: picks a direction and follows that direction to find a peak
+
+Pick middle column j = m/2
+find the global maximum on column J
+Compare (i,j-1), (i,j), (i,j+1)
+if Pick the left columns if (i,j-1) > (i,j) 
+else if Pick the right columns if (i,j+1) > (i,j)
+return (i,j)
+
+in terms of one column
+return the global max

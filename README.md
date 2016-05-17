@@ -1,4 +1,4 @@
-# Practice_folder
+# Practice_Folder
 This is a practice folder for algorithms from EPI, CCI, and LeetCode.
 
 Most of the work for this folder is going to be done over Spring 2016.
